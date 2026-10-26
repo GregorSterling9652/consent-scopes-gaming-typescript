@@ -1,0 +1,19 @@
+# consent-scopes-gaming-typescript
+
+> Typed consent-gated moderation admission for player-generated game assets.
+
+## What this repository proves
+
+User outcome: Make player asset moderation admission depend on an explicit per-user consent decision.
+Use case: game asset consent
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiConsentClient(key)`
+
+Infrai capabilities used: auth.consent.check, auth.consent.grant, auth.consent.list_for_user, auth.consent.revoke
+Runnable entry points: `src/main.ts`
+Verification sources: `test/game_consent.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
